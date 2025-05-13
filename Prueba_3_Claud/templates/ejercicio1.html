@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1: Promedio y Asistencia</title>
+</head>
+<body>
+    <h1>Ejercicio 1: Promedio y Asistencia</h1>
+    <form method="POST" action="/procesar_ejercicio1">
+        <label for="nota1">Nota 1 (10-70):</label>
+        <input type="number" id="nota1" name="nota1" min="10" max="70" required><br><br>
+
+        <label for="nota2">Nota 2 (10-70):</label>
+        <input type="number" id="nota2" name="nota2" min="10" max="70" required><br><br>
+
+        <label for="nota3">Nota 3 (10-70):</label>
+        <input type="number" id="nota3" name="nota3" min="10" max="70" required><br><br>
+
+        <label for="asistencia">Asistencia (%) (0-100):</label>
+        <input type="number" id="asistencia" name="asistencia" min="0" max="100" required><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if promedio %}
+        <h2>Resultado:</h2>
+        <p>Promedio: {{ promedio }}</p>
+        <p>Asistencia: {{ asistencia }}%</p>
+        <p>Estado: {{ estado }}</p>
+    {% endif %}
+
+    <p><a href="/">Volver al Menú Principal</a></p>
+</body>
+</html>
